@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefy's Top - Pizzeria Genova</title>
+    <meta name="description" content="Stefy's Top Pizzeria a Genova - Pizza, Hamburger, Piadine e tanto altro! Ordina su Just Eat o vieni a trovarci in Via Laviosa 83-85r.">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         HEADER - Intestazione con mascotte e nome pizzeria
+         Per cambiare il nome o il tagline, modifica il testo qui sotto.
+         Per cambiare l'immagine della mascotte, sostituisci il file images/mascot.png
+         ========================================================================== -->
+    <header class="header">
+        <div class="header-content">
+            <img
+src="images/mascot.png"
+alt="Mascotte Stefy's Top - bassotto con cappello da chef"
+class="mascot-img"
+>
+            <h1>Stefy's Top</h1>
+            <p class="tagline">🍕 La pizzeria più divertente di Genova! 🍕</p>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         NAVIGAZIONE - Menu di navigazione sticky
+         Per aggiungere una nuova sezione, aggiungi un nuovo <a> con href="#id-sezione"
+         ========================================================================== -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#sorprendimi">🎲 Sorprendimi</a>
+            <a href="#pizze">🍕 Pizze</a>
+            <a href="#impasti">🫓 Impasti</a>
+            <a href="#pinse">🎵 Pinse</a>
+            <a href="#hamburger">🍔 Hamburger</a>
+            <a href="#extra-hamburger">➕ Extra</a>
+            <a href="#crepes-salate">🏎️ Crepes Salate</a>
+            <a href="#piadine">🎬 Piadine</a>
+            <a href="#toast">🍞 Toast</a>
+            <a href="#hotdog">🌭 Hot Dog</a>
+            <a href="#panini">⚽ Panini</a>
+            <a href="#crepes-dolci">🏍️ Crepes Dolci</a>
+            <a href="#semifreddi">🍰 Semifreddi</a>
+            <a href="#bevande">🥤 Bevande</a>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+         BOTTONE JUST EAT - Link per ordinare online
+         Per cambiare il link, modifica l'attributo href qui sotto.
+         ========================================================================== -->
+    <section class="justeat-section">
+        <a
+href="https://www.justeat.it/restaurants-stefystoppizzeria/menu"
+class="justeat-btn"
+target="_blank"
+rel="noopener noreferrer"
+>
+            🛵 Ordina su Just Eat!
+        </a>
+    </section>
+
+    <!-- ==========================================================================
+         SEZIONE SORPRENDIMI - Feature interattiva
+         L'utente sceglie una categoria e riceve un suggerimento casuale.
+         La logica è gestita in script.js
+         ========================================================================== -->
+    <section class="sorprendimi-section" id="sorprendimi">
+        <h2>🎲 Sorprendimi!</h2>
+        <p>Non sai cosa scegliere? Lascia decidere al destino!</p>
+        <div class="sorprendimi-controls">
+            <select
+id="sorprendimi-category"
+class="sorprendimi-select"
+aria-label="Scegli una categoria"
+>
+                <option value="tutte">🌟 Tutte le categorie</option>
+                <option value="Pizze">🍕 Pizze</option>
+                <option value="Pinse">🎵 Pinse</option>
+                <option value="Hamburger">🍔 Hamburger</option>
+                <option value="Crepes Salate">🏎️ Crepes Salate</option>
+                <option value="Piadine">🎬 Piadine</option>
+                <option value="Toast">🍞 Toast</option>
+                <option value="Hot Dog">🌭 Hot Dog</option>
+                <option value="Panini">⚽ Panini</option>
+                <option value="Crepes Dolci">🏍️ Crepes Dolci</option>
+                <option value="Semifreddi">🍰 Semifreddi</option>
+            </select>
+            <button id="sorprendimi-btn" class="sorprendimi-btn">🎰 Sorprendimi!</button>
+        </div>
+        <div id="sorprendimi-result" class="sorprendimi-result"></div>
+    </section>
+
+    <!-- ==========================================================================
+         SEZIONI MENU
+         Ogni sezione contiene gli elementi di una categoria.
+         Per aggiungere/rimuovere elementi, modifica sia l'HTML qui sotto
+         che i dati in script.js (per la funzione Sorprendimi).
+         ========================================================================== -->
+
+    <!-- ===== PIZZE ===== -->
+    <section class="menu-section" id="pizze">
+        <h2>🍕 Pizze</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Marinara</span><span class="item-price">€ 4,00</span></div>
+<p class="item-desc">pomodoro, aglio, origano</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Margherita</span><span class="item-price">€ 5,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, basilico</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Pugliese</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Rucola</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, rucola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Nunu</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, patatine</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Napoli</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, acciughe, capperi, origano</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Cotto</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Wurstel</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, wurstel</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Americana</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, wurstel, patatine</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tonno</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, tonno</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Biancaneve</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">mozzarella, stracchino</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Gorgo</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Romana</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, acciughe, capperi, olive</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Diavola</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, salame piccante</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Pioggia</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, doppia mozzarella</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Salsiccia</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, salsiccia</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Sant'Olcese</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, salame Sant'Olcese</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">4 Formaggi</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, stracchino, fontina</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tonno e Cipolla</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, tonno, cipolla</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">4 Stagioni</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, carciofi, prosciutto cotto, funghi, olive</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Capricciosa</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, carciofi, funghi, olive</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Carbonara</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, scamorza affumicata, pancetta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Genovese</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">mozzarella, stracchino, pesto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Crudo</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto crudo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Prosciutto e Funghi</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, funghi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bismarck</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, uovo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bufala</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, mozzarella di bufala</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Panna e Speck</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">panna, speck</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Ortolana</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, zucchine, melanzane, peperoni</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Delicata</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, brie, pomodorini</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Salsiccia e Cipolla</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, salsiccia, cipolla</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Costa's</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">mozzarella, stracchino, pancetta affumicata, cipolla, grana a scaglie</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bufalina</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">mozzarella, mozzarella di bufala, pomodorini, basilico</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tremenda</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, salsiccia, wurstel</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Messicana</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, fagioli, tonno, salame piccante</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Stefy's</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, taleggio, speck, funghi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Vesa</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">mozzarella, mozzarella di bufala, pomodorini, rucola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Poppi</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">mozzarella, stracchino, origano, tonno, olive, pomodorini</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Special</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, stracchino, prosciutto crudo, funghi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Simpson</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, cipolle, melanzane</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Saporita</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, salsiccia, salame piccante</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Marina</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, speck, rucola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Speck e Brie</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">mozzarella, speck, brie</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Sportiva</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, bresaola, rucola, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Brutale</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, peperoni, salame piccante</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Sfiziosa</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, mozzarella di bufala, prosciutto cotto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Variant</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">mozzarella, gorgonzola, rucola, speck</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bomba</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, peperoni, salame piccante, wurstel, funghi, salsiccia</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Caldesi</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, prosciutto cotto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Giulia's</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, olive, patatine</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Portofino</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, panna, pesto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Contadino</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">panna, speck, gorgonzola, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Scarpanto</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, wurstel, peperoni, funghi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Laviosa</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, stracchino, gorgonzola, salsa di noci, speck</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Rizzo</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, cipolle, rucola, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Gavino</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, prosciutto cotto, carciofi, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Salgari</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">mozzarella, stracchino, funghi porcini, prosciutto crudo, rucola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bobbi</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, salsiccia, mais</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Ungaretti</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, tonno, mais</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Strong</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, cipolle, salame piccante</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Loano</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">panna, salsiccia, mais</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Frutti di Mare</span><span class="item-price">€ 10,00</span></div>
+<p class="item-desc">pomodoro, insalata di mare</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Sporting</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, peperoni, gamberetti, pesto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Maona</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, melanzane, prosciutto cotto, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Garelli</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, brie, speck, funghi porcini</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Baryle</span><span class="item-price">€ 9,50</span></div>
+<p class="item-desc">mozzarella, stracchino, prosciutto cotto, peperoni, funghi porcini, olio all'aglio</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Zuga</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">panna, zucchine, gamberetti</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tortellino</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">panna, prosciutto cotto, piselli</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">4 Stagioni Sbagliata</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto crudo, porcini, carciofi, olive</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Perché No</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto crudo, trevigiana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Si Salvi Chi Può</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, salsiccia, 'nduja, olive</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Cento all'Ora</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, 'nduja</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Stasera Mi Butto</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">panna, speck, salsa di noci</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Calafrica</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">mozzarella, mozzarella di bufala, friarielli, acciughe, aglio</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Dammi del Tu</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, salsiccia, friarielli</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hakuna Matata</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, kebab, patatine, salse</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Me La Mangio Tutta</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, asparagi, uovo, pancetta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Stammi alla Larga</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, taleggio, salsiccia, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Amici Come Prima</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, mozzarella di bufala, prosciutto cotto, rucola, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Regina Gorgonzola</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">mozzarella, gorgonzola, aglio, pomodorini</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Pizza Ci Ova</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, cipolle, uovo, origano</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Old Monteleone</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, gorgonzola, stracchino, salsiccia, peperoni, wurstel, patatine</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Napulé</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">doppio impasto, pomodoro, bufala a metà cottura, pomodorini, basilico</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Grinch</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, tonno, piselli, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Senza Parole</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, tonno, peperoni, fagioli, mais, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Fumé</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, aglio, scamorza, prosciutto crudo di Praga, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Zorba</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, feta, olive, cipolle, pomodorini, origano</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Burratina</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, burrata, acciughe a metà cottura</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Milla</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">mozzarella, mozzarella di bufala, gorgonzola, prosciutto crudo, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Morelli</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, patatine, uovo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Laba</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, scamorza affumicata, cipolle, bacon, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Giulio</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, tonno, cipolle, nduja</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Gina</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">mozzarella, salame dolce, funghi, stracchino, rucola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Lucky</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, salame dolce, peperoni, wurstel</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hulk</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, pancetta, piselli, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Smackdown</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">mozzarella, salsiccia, peperoni, stracchino, olio piccante</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Patrizia</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, prosciutto cotto in uscita, stracciatella, pesto, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Sorella di Andre</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, salsiccia in uscita, stracciatella, rucola, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Taz</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">mozzarella, brie, cipolle, salsiccia, tartufo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Deca</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, salame piccante, nduja, salsiccia in uscita</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Puddu</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, funghi, mozzarella di bufala, patatine</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mentanella</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">mozzarella, tonno, pepe nero, aglio, limone, foglioline di menta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Rosa</span><span class="item-price">€ 10,00</span></div>
+<p class="item-desc">mozzarella, mozzarella di bufala, prosciutto cotto in uscita, crema di tartufo, grana, basilico</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Gnam!</span><span class="item-price">€ 9,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, cheddar, hamburger, bacon, uovo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">All In</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, salame piccante, salsiccia, cipolle, peperoni</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Desiderio</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, panna, cipolle, gorgonzola, salame piccante</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== IMPASTI DISPONIBILI ===== -->
+    <section class="menu-section" id="impasti">
+        <h2>🫓 Impasti disponibili</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Integrale</span><span class="item-price">+1,00 €</span></div>
+<p class="item-desc">supplemento</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Senza glutine</span><span class="item-price">+3,50 €</span></div>
+<p class="item-desc">supplemento</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">5 cereali</span><span class="item-price">+3,50 €</span></div>
+<p class="item-desc">supplemento</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Impasto pinsa</span><span class="item-price">+2,00 €</span></div>
+<p class="item-desc">supplemento</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== PINSE ===== -->
+    <section class="menu-section" id="pinse">
+        <h2>🎵 Pinse</h2>
+        <div class="section-divider"></div>
+        <p class="section-note">Le nostre pinse sono dedicate ai grandi artisti della musica italiana!</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Caparezza</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, salame piccante, salsiccia, cipolla</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Alessandra Amoroso</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, pancetta, caprino, pepe nero</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tiziano Ferro</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, stracchino, gorgonzola, salsa di noci, speck</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Vasco Rossi</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">stracchino, gorgonzola, salame piccante, nduja, rucola, grana, aglio</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Renato Zero</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, salsiccia, melanzane, peperoni, cipolla, olio piccante, nduja</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Budi Pesto</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">mozzarella, stracchino, pesto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mina</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella di bufala, prosciutto crudo, pomodorini</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Eros Ramazzotti</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, ricotta, porcini, prosciutto cotto, paté di olive</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Gianni Morandi</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, prosciutto cotto, prosciutto crudo, salame dolce, salame piccante, pancetta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Jovanotti</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">mozzarella, stracchino, pomodorini, peperoni, olive, acciughe, capperi, cipolle, origano</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mengoni</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">pomodoro, mozzarella, mozzarella di bufala, salsiccia, friarielli</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">J-Ax</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, stracchino, fontina, brie, scamorza, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Giorgia</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, stracchino, pancetta, cipolle, grana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Emma Marrone</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, gorgonzola, salame piccante, peperoni</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Elisa</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, taleggio, speck, funghi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Ultimo</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, origano, cotto, cipolle, gorgonzola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Fabri Fibra</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">pomodoro, mozzarella, bacon, scamorza, cipolle</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== HAMBURGER ===== -->
+    <section class="menu-section" id="hamburger">
+        <h2>🍔 Hamburger</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hamburger</span><span class="item-price">€ 5,50</span></div>
+<p class="item-desc">carne, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Cheeseburger</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">carne, cheddar, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Classic</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">carne, lattuga, pomodoro, cheddar, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Onion</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">carne, cheddar, cipolle, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Bacon</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">carne, cheddar, bacon, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Egg</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">carne, cheddar, uovo, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Survival</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">carne, cheddar, uovo, bacon, cipolle, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Miss Potato</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">carne, cheddar, patatine al forno, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Texano</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">carne, cheddar, fagioli, cipolle, mais, tabasco</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Buffalo</span><span class="item-price">€ 10,00</span></div>
+<p class="item-desc">carne, mozzarella di bufala, speck, cipolle, paté di porcini</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Diet</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">carne, cheddar, lattuga, grana, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Diavel</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">carne, scamorza, nduja, tabasco</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Smell</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">carne, sottiletta, gorgonzola, nduja, melanzane, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Camilla Burger</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">carne, mozzarella di bufala, bacon, granella di pistacchio, maionese</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Nano</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">carne, cipolle crude, bacon, grana, harissa</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Peanut</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">carne, cheddar, bacon, patatine fritte, burro d'arachidi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Orto</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">carne, sottiletta, melanzane, peperoni, zucchine, cipolle</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Alito</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">carne, gorgonzola, rucola, aglio, nduja</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Genova</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">carne, sottiletta, bacon, pesto, pomodorini secchi</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Burger Queen</span><span class="item-price">€ 10,00</span></div>
+<p class="item-desc">carne, taleggio, speck, funghi, maionese tartufata</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Michele</span><span class="item-price">€ 8,50</span></div>
+<p class="item-desc">carne, cheddar, wurstel, bacon, cipolle, peperoni</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Burger King</span><span class="item-price">€ 10,00</span></div>
+<p class="item-desc">doppia carne, scamorza, bacon, pomodori secchi, trevigiana</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Roma</span><span class="item-price">€ 9,50</span></div>
+<p class="item-desc">carne, pecorino romano, pancetta, uovo, pepe nero</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Goat</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">carne, caprino, cipolle crude, pepe nero, pomodoro</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mr. Hide</span><span class="item-price">€ 9,00</span></div>
+<p class="item-desc">carne, gorgonzola, lardo, noci, miele</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== EXTRA HAMBURGER ===== -->
+    <section class="menu-section" id="extra-hamburger">
+        <h2>➕ Extra Hamburger</h2>
+        <div class="section-divider"></div>
+        <p class="section-note">Salse disponibili: ketchup, maionese, senape, salsa cheddar, salsa rosa, salsa BBQ, salsa burger, tabasco.</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Carne Angus</span><span class="item-price">+2,00 €</span></div>
+<p class="item-desc">supplemento carne Angus</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Carne Chianina</span><span class="item-price">+2,00 €</span></div>
+<p class="item-desc">supplemento carne Chianina</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Doppia carne</span><span class="item-price">+2,00 €</span></div>
+<p class="item-desc">supplemento doppia carne</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Patatine fritte piccole</span><span class="item-price">€ 2,50</span></div>
+<p class="item-desc">porzione piccola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Patatine fritte grandi</span><span class="item-price">€ 3,50</span></div>
+<p class="item-desc">porzione grande</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== CREPES SALATE ===== -->
+    <section class="menu-section" id="crepes-salate">
+        <h2>🏎️ Crepes Salate</h2>
+        <div class="section-divider"></div>
+        <p class="section-note">Le nostre crepes salate sono dedicate ai campioni della Formula 1!</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Schumacher</span><span class="item-price">€ 5,50</span></div>
+<p class="item-desc">prosciutto cotto, mozzarella</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Verstappen</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">prosciutto crudo, mozzarella</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Lauda</span><span class="item-price">€ 5,50</span></div>
+<p class="item-desc">philadelphia, prosciutto cotto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Raikkonen</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">philadelphia, prosciutto crudo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Vettel</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">speck, brie</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hamilton</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">speck, gorgonzola, noci</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Alonso</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">bresaola, caprino, pepe nero, grana, succo di limone</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== PIADINE ===== -->
+    <section class="menu-section" id="piadine">
+        <h2>🎬 Piadine</h2>
+        <div class="section-divider"></div>
+        <p class="section-note">Le nostre piadine sono dedicate ai personaggi dei cartoni animati!</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Topogigio</span><span class="item-price">€ 5,50</span></div>
+<p class="item-desc">prosciutto cotto, mozzarella</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Lupin</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">prosciutto crudo, mozzarella</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Gadget</span><span class="item-price">€ 5,50</span></div>
+<p class="item-desc">philadelphia, prosciutto cotto</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Sailor Moon</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">philadelphia, prosciutto crudo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">McQueen</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">speck, brie</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Pikachu</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">bresaola, caprino, pepe nero, grana, succo di limone</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Goku</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">Nutella</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== TOAST ===== -->
+    <section class="menu-section" id="toast">
+        <h2>🍞 Toast</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Cotto</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">prosciutto cotto, formaggio</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Crudo</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">prosciutto crudo, formaggio</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Salame Dolce</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">salame dolce, formaggio</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Speck e Brie</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">speck, brie</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== HOT DOG ===== -->
+    <section class="menu-section" id="hotdog">
+        <h2>🌭 Hot Dog</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hot Dog</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">wurstel, formaggio, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hot Dog Farcito</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">wurstel, formaggio, crauti, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Hot Dog Super</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">wurstel, formaggio, bacon</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== PANINI ===== -->
+    <section class="menu-section" id="panini">
+        <h2>⚽ Panini</h2>
+        <div class="section-divider"></div>
+        <p class="section-note">I nostri panini sono dedicati ai campioni del calcio!</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Quagliarella</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">porchetta, friarielli, scamorza, tabasco</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Totti</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">tonno, mozzarella, pomodoro, lattuga, maionese</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Baggio</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">prosciutto cotto, brie, lattuga, maionese</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mertens</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">prosciutto cotto, formaggio, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Crispi</span><span class="item-price">€ 6,50</span></div>
+<p class="item-desc">stracchino, prosciutto crudo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Messi</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">bresaola, scamorza, grana, rucola</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Del Piero</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">speck, brie, pomodoro, lattuga</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Icardi</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">salsiccia, cipolle, peperoni, salsa a scelta</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Ronaldo</span><span class="item-price">€ 8,00</span></div>
+<p class="item-desc">bresaola, caprino, pomodoro, pepe nero</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Dibala</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">prosciutto crudo, mozzarella di bufala, lattuga, pomodoro, salsa a scelta</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== CREPES DOLCI ===== -->
+    <section class="menu-section" id="crepes-dolci">
+        <h2>🏍️ Crepes Dolci</h2>
+        <div class="section-divider"></div>
+        <p class="section-note">Le nostre crepes dolci sono dedicate ai campioni della MotoGP!</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Valentino Rossi</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">Nutella, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Marquez</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">Nutella, amaretti, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Dovizioso</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">Nutella, noci, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Morbidelli</span><span class="item-price">€ 6,00</span></div>
+<p class="item-desc">Nutella, banana, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Petrucci</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">marmellata ai frutti di bosco, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Stoner</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">marmellata alla fragola, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Iannone</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">marmellata all'albicocca, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Salvadori</span><span class="item-price">€ 7,00</span></div>
+<p class="item-desc">crema di pistacchio, zucchero a velo</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bastianini</span><span class="item-price">€ 7,50</span></div>
+<p class="item-desc">burro d'arachidi, marmellata di fragola</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== SEMIFREDDI ===== -->
+    <section class="menu-section" id="semifreddi">
+        <h2>🍰 Semifreddi</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Cheesecake al caramello salato</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Cheesecake al cioccolato</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tris di cioccolati</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Lemon Tart</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Mascarpone al cioccolato</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Tiramisù</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Crema catalana</span><span class="item-price">€ 5,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Meringata</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">con topping al caramello, cioccolato o frutti di bosco</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Panna cotta</span><span class="item-price">€ 5,00</span></div>
+<p class="item-desc">con topping al caramello, cioccolato o frutti di bosco</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ===== BEVANDE ===== -->
+    <section class="menu-section" id="bevande">
+        <h2>🥤 Bevande</h2>
+        <div class="section-divider"></div>
+        <div class="menu-grid">
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bibite in lattina</span><span class="item-price">€ 2,50</span></div>
+<p class="item-desc">Coca-Cola, Coca-Cola Zero, Fanta, Sprite, Estathé pesca/limone</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Bibite in bottiglia</span><span class="item-price">€ 3,50</span></div>
+<p class="item-desc">Coca-Cola, Fanta, Sprite, Estathé pesca/limone</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Birre da 33 cl</span><span class="item-price">€ 2,50</span></div>
+<p class="item-desc">Moretti, Beck's, Heineken, Peroni</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Birre da 66 cl</span><span class="item-price">€ 3,50</span></div>
+<p class="item-desc">Moretti, Beck's, Heineken, Ichnusa</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Birre da 33 cl premium</span><span class="item-price">€ 3,50</span></div>
+<p class="item-desc">Tennent's, Ceres, Corona</p>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Acqua naturale o frizzante</span><span class="item-price">€ 1,00</span></div>
+</div>
+            <div class="menu-card">
+<div class="item-header"><span class="item-name">Consegna</span><span class="item-price">€ 1,00</span></div>
+<p class="item-desc">costo di consegna a domicilio</p>
+</div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER - Informazioni ristorante
+         Per modificare indirizzo, telefono o orari, cambia il testo qui sotto.
+         ========================================================================== -->
+    <footer class="footer">
+        <h3>🐶 Stefy's Top</h3>
+        <p>📍 Via Laviosa 83-85r, Genova</p>
+        <p>📞 010 6962295</p>
+        <p class="footer-hours">🕕 Aperti tutti i giorni dalle 18:30 alle 22:30</p>
+        <p style="margin-top: 1.5rem;">
+            <a
+href="https://www.justeat.it/restaurants-stefystoppizzeria/menu"
+class="justeat-btn"
+target="_blank"
+rel="noopener noreferrer"
+style="font-size: 1rem; padding: 0.7rem 1.5rem;"
+>
+                🛵 Ordina su Just Eat!
+            </a>
+        </p>
+        <p style="margin-top: 1.5rem; font-size: 0.85rem; color: #A1887F;">© Stefy's Top Pizzeria - Genova</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
