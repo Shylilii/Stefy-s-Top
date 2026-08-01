@@ -67,8 +67,8 @@ h1, h2, h3, h4 {
 }
 
 .mascot-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     border: 4px solid #FFC107;
     object-fit: cover;
@@ -381,8 +381,8 @@ h1, h2, h3, h4 {
     }
 
     .mascot-img {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
 
     .nav a {
